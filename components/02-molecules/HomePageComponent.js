@@ -21,6 +21,7 @@ const HomePageComponent = () => {
         loop
         muted
         ref={videoRef}
+        playsInline
         className={classes.video}>
         <source src="/assets/videos/carpe4diem.mp4" type="video/mp4" />
       </video>
