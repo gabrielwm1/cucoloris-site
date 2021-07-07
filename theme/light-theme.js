@@ -1,6 +1,6 @@
-import { createMuiTheme } from "@material-ui/core/styles";
+import { createTheme } from "@material-ui/core/styles";
 
-const Theme = createMuiTheme({
+const Theme = createTheme({
   typography: {
     semiBold: "Montserrat-SemiBold, Arial",
     medium: "Montserrat-Medium, Arial",
