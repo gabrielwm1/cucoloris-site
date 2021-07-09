@@ -5,11 +5,6 @@ export const useStyles = makeStyles((theme) => ({
     display: "flex",
   },
   video: {
-    // position: "relative",
-    // width: "100%",
-    // height: "400px",
-    // left: 0,
-    // top: 0,
     position: "absolute",
     top: "50%",
     left: "50%",
@@ -27,6 +22,42 @@ export const useStyles = makeStyles((theme) => ({
     height: "100%",
     color: theme.palette.primary.white,
     // @include aspect-ratio(16, 9);
+  },
+  overlay: {
+    position: "absolute",
+    top: "0",
+    left: "0",
+    zIndex: "1",
+    width: "100vw",
+    height: "100vh",
+  },
+  text: {
+    fontFamily: theme.typography.bold,
+    color: theme.palette.primary.white,
+    textTransform: "uppercase",
+    fontSize: "1.25rem",
+  },
+  topContainer: {
+    display: "flex",
+    justifyContent: "center",
+    [theme.breakpoints.up("sm")]: {
+      justifyContent: "flex-start",
+    },
+  },
+  middleContainer: {
+    display: "flex",
+    justifyContent: "center",
+    padding: "0rem",
+    textAlign: "center",
+    [theme.breakpoints.up("sm")]: {
+      padding: "0rem 2rem",
+    },
+    [theme.breakpoints.up("md")]: {
+      padding: "0 5rem",
+    },
+    [theme.breakpoints.up("lg")]: {
+      padding: "0 8rem",
+    },
   },
 
   // .video {

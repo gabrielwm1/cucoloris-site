@@ -1,11 +1,11 @@
 import { createTheme } from "@material-ui/core/styles";
+import "../styles/Home.module.css";
 
 const Theme = createTheme({
   typography: {
-    semiBold: "Montserrat-SemiBold, Arial",
-    medium: "Montserrat-Medium, Arial",
-    bold: "Montserrat-Bold, Arial",
-    regular: "Montserrat-Regular, Arial",
+    bold: "BMW-Bold, Arial",
+    light: "BMW-Light, Arial",
+    regular: "BMW-Regular, Arial",
   },
   palette: {
     primary: {

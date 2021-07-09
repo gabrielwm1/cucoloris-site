@@ -7,32 +7,26 @@ export default class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
-          {/* <link href="/fonts/fonts.css" rel="stylesheet" /> */}
-          {/* <link rel="Thrive Factor Logo" href="favicon.ico" />
+          <link href="/fonts/fonts.css" rel="stylesheet" />
+          {/* {/* <link rel="Thrive Factor Logo" href="favicon.ico" /> */}
           <link
             rel="preload"
-            href="/assets/fonts/Montserrat-Bold.tff"
+            href="/assets/fonts/BMWTypeGlobalPro-Regular.ttf"
             as="font"
             crossOrigin=""
           />
           <link
             rel="preload"
-            href="/assets/fonts/Montserrat-Regular.tff"
+            href="/assets/fonts/BMWTypeGlobalPro-Bold.ttf"
             as="font"
             crossOrigin=""
           />
           <link
             rel="preload"
-            href="/assets/fonts/Montserrat-Medium.tff"
+            href="/assets/fonts/BMWTypeGlobalPro-Light.ttf"
             as="font"
             crossOrigin=""
           />
-          <link
-            rel="preload"
-            href="/assets/fonts/Montserrat-SemiBold.tff"
-            as="font"
-            crossOrigin=""
-          /> */}
         </Head>
         <body style={{ minHeight: "100vh" }}>
           <Main />
