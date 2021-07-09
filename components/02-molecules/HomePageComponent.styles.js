@@ -22,6 +22,7 @@ export const useStyles = makeStyles((theme) => ({
     height: "100%",
     color: theme.palette.primary.white,
     // @include aspect-ratio(16, 9);
+    //
   },
   overlay: {
     position: "absolute",
