@@ -26,9 +26,7 @@ const HomePageComponent = () => {
   const [centiSeconds, setCentiSeconds] = useState(0);
 
   useEffect(() => {
-    setTimeout(() => {
-      videoRef.current.play();
-    }, 1);
+    videoRef.current.play();
   }, []);
 
   useEffect(() => {
@@ -229,7 +227,7 @@ const HomePageComponent = () => {
                       The Huey Newton Foundation
                     </a>
                   </span>
-                  . !
+                  .
                   {!desktopView && (
                     <div className={classes.text}>
                       <p>
@@ -258,7 +256,7 @@ const HomePageComponent = () => {
               </Grid>
               <Grid item xs={12} sm={6} className={classes.timerContainer}>
                 <p className={classes.text}>
-                  {days}:{hours < 10 ? '0' : ''}
+                  0{days}:{hours < 10 ? '0' : ''}
                   {hours}:{minutes < 10 ? '0' : ''}
                   {minutes}:{seconds < 10 ? '0' : ''}
                   {seconds}:{milliseconds < 10 ? '0' : ''}
