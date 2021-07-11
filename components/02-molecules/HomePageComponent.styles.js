@@ -55,7 +55,9 @@ export const useStyles = makeStyles((theme) => ({
   topContainer: {
     display: 'flex',
     justifyContent: 'flex-start',
+    flexDirection: 'column',
     [theme.breakpoints.up('sm')]: {
+      flexDirection: 'row',
       justifyContent: 'space-between',
       alignItems: 'center',
     },
@@ -79,13 +81,13 @@ export const useStyles = makeStyles((theme) => ({
   },
   workContainer: {
     order: 1,
-    marginBottom: '5rem',
+    // marginBottom: '5rem',
     '& h2': {
       fontSize: '1.5rem',
       textAlign: 'center',
     },
     [theme.breakpoints.up('sm')]: {
-      marginBottom: '0rem',
+      // marginBottom: '0rem',
       order: 2,
       '& h2': {
         textAlign: 'end !important',
