@@ -18,8 +18,8 @@ export const useStyles = makeStyles((theme) => ({
   videoPlayerContianer: {
     position: 'relative',
     backgroundColor: theme.palette.primary.white,
-    width: '100%',
-    height: '100%',
+    width: '100vh',
+    height: '100vh',
     color: theme.palette.primary.white,
   },
   overlay: {

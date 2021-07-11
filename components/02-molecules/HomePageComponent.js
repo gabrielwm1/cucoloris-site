@@ -253,11 +253,17 @@ const HomePageComponent = () => {
               <Grid item xs={12} sm={6} className={classes.workContainer}>
                 {desktopView ? (
                   <>
-                    <Box display={'flex'} justifyContent={'flex-end'}>
+                    <Box>
                       {infoSelected ? (
                         <>
                           {desktopView && (
-                            <div className={classes.text}>
+                            <div
+                              className={classes.text}
+                              style={{
+                                display: 'flex',
+                                justifyContent: 'flex-end',
+                              }}
+                            >
                               <p>
                                 Website by{' '}
                                 <span className={classes.salmon}>
@@ -268,7 +274,7 @@ const HomePageComponent = () => {
                                   >
                                     Gabe Wilk
                                   </a>
-                                </span>{' '}
+                                </span>
                               </p>
                             </div>
                           )}
@@ -279,7 +285,7 @@ const HomePageComponent = () => {
                             style={{
                               cursor: 'pointer',
                               display: 'flex',
-                              justifyContent: 'center',
+                              justifyContent: 'flex-end',
                             }}
                             onClick={() => handleInfoSelected()}
                             className={classes.text}
@@ -292,7 +298,6 @@ const HomePageComponent = () => {
                   </>
                 ) : (
                   <>
-                    {' '}
                     <h2
                       className={classes.text}
                       onClick={() => handleWorkSelected()}
