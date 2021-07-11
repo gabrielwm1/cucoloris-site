@@ -10,17 +10,14 @@ export const useStyles = makeStyles((theme) => ({
     left: '50%',
     transform: ' translate(-50%, -50%)',
     margin: '0 auto',
-    height: '100vh',
+    minHeight: '100vh',
     width: '100%',
     objectFit: 'cover',
-    resizeMode: 'cover',
   },
 
-  videoPlayerContianer: {
-    position: 'relative',
+  videoPlayerContainer: {
     backgroundColor: theme.palette.primary.white,
     width: '100vh',
-    height: '100vh',
     color: theme.palette.primary.white,
   },
   overlay: {

@@ -111,8 +111,8 @@ const HomePageComponent = () => {
     <div>
       <Box className={classes.videoPlayerContainer}>
         <video
-          width='100%'
-          height='100%'
+          //   width='100vw'
+          //   height='100vh'
           loop
           muted
           ref={videoRef}
