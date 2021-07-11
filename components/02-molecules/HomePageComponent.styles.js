@@ -152,4 +152,10 @@ export const useStyles = makeStyles((theme) => ({
       opacity: '0.5',
     },
   },
+  hoverInfoButton: {
+    cursor: 'pointer',
+    '&:hover': {
+      opacity: '0.5',
+    },
+  },
 }));

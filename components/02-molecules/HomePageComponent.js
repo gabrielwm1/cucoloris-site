@@ -256,14 +256,13 @@ const HomePageComponent = () => {
                         <>
                           <div
                             style={{
-                              cursor: 'pointer',
                               display: 'flex',
                               justifyContent: 'flex-end',
                             }}
                             onClick={() => handleInfoSelected()}
                             className={classes.text}
                           >
-                            <p>Info</p>
+                            <p className={classes.hoverInfoButton}>Info</p>
                           </div>
                         </>
                       )}
