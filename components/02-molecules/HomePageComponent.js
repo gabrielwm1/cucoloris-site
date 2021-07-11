@@ -241,7 +241,7 @@ const HomePageComponent = () => {
                                 Website by{' '}
                                 <span className={classes.salmon}>
                                   <a
-                                    href='mailto:gabe@gmail.com'
+                                    href='mailto:gabe.wilk@gmail.com'
                                     rel='noreferrer'
                                     target='_blank'
                                   >
