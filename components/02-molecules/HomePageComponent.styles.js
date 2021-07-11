@@ -80,6 +80,7 @@ export const useStyles = makeStyles((theme) => ({
   },
   bottomContainer: {
     display: 'flex',
+    position: 'relative',
   },
   workContainer: {
     order: 1,
