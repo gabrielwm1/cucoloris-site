@@ -232,7 +232,13 @@ const HomePageComponent = () => {
                       <p>
                         Website by{' '}
                         <span className={classes.salmon}>
-                          <a href='mailto:gabe.wilk@gmail.com'>Gabe Wilk</a>
+                          <a
+                            href='mailto:gabe.wilk@gmail.com'
+                            rel='noreferrer'
+                            target='_blank'
+                          >
+                            Gabe Wilk
+                          </a>
                         </span>{' '}
                       </p>
                     </div>
@@ -255,7 +261,13 @@ const HomePageComponent = () => {
                               <p>
                                 Website by{' '}
                                 <span className={classes.salmon}>
-                                  <a href='mailto:gabe@gmail.com'>Gabe Wilk</a>
+                                  <a
+                                    href='mailto:gabe@gmail.com'
+                                    rel='noreferrer'
+                                    target='_blank'
+                                  >
+                                    Gabe Wilk
+                                  </a>
                                 </span>{' '}
                               </p>
                             </div>
