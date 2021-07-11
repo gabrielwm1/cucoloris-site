@@ -141,32 +141,31 @@ const HomePageComponent = () => {
             </h1>
 
             <Box display={'flex'} justifyContent={'center'}>
-              {infoSelected ? (
+              {desktopView ? (
                 <>
-                  {desktopView && (
-                    <div className={classes.text}>
-                      <p>
-                        Website by{' '}
-                        <span className={classes.salmon}>
-                          <a href='mailto:gabe@gmail.com'>Gabe Wilk</a>
-                        </span>{' '}
-                      </p>
-                    </div>
-                  )}
+                  <h2
+                    className={classes.text}
+                    onClick={() => handleWorkSelected()}
+                    style={{ cursor: 'pointer' }}
+                  >
+                    {workSelected ? 'back' : 'work'}
+                  </h2>
                 </>
               ) : (
                 <>
-                  <div
-                    style={{
-                      cursor: 'pointer',
-                      display: 'flex',
-                      justifyContent: 'center',
-                    }}
-                    onClick={() => handleInfoSelected()}
-                    className={classes.text}
-                  >
-                    <p>Info</p>
-                  </div>
+                  {!infoSelected && (
+                    <div
+                      style={{
+                        cursor: 'pointer',
+                        display: 'flex',
+                        justifyContent: 'center',
+                      }}
+                      onClick={() => handleInfoSelected()}
+                      className={classes.text}
+                    >
+                      <p>Info</p>
+                    </div>
+                  )}
                 </>
               )}
             </Box>
@@ -233,7 +232,7 @@ const HomePageComponent = () => {
                       <p>
                         Website by{' '}
                         <span className={classes.salmon}>
-                          <a href='mailto:gabe@gmail.com'>Gabe Wilk</a>
+                          <a href='mailto:gabe.wilk@gmail.com'>Gabe Wilk</a>
                         </span>{' '}
                       </p>
                     </div>
@@ -246,13 +245,51 @@ const HomePageComponent = () => {
           <div className={classes.bottomContainer}>
             <Grid container>
               <Grid item xs={12} sm={6} className={classes.workContainer}>
-                <h2
-                  className={classes.text}
-                  onClick={() => handleWorkSelected()}
-                  style={{ cursor: 'pointer' }}
-                >
-                  {workSelected ? 'back' : 'work'}
-                </h2>
+                {desktopView ? (
+                  <>
+                    <Box display={'flex'} justifyContent={'flex-end'}>
+                      {infoSelected ? (
+                        <>
+                          {desktopView && (
+                            <div className={classes.text}>
+                              <p>
+                                Website by{' '}
+                                <span className={classes.salmon}>
+                                  <a href='mailto:gabe@gmail.com'>Gabe Wilk</a>
+                                </span>{' '}
+                              </p>
+                            </div>
+                          )}
+                        </>
+                      ) : (
+                        <>
+                          <div
+                            style={{
+                              cursor: 'pointer',
+                              display: 'flex',
+                              justifyContent: 'center',
+                            }}
+                            onClick={() => handleInfoSelected()}
+                            className={classes.text}
+                          >
+                            <p>Info</p>
+                          </div>
+                        </>
+                      )}
+                    </Box>
+                  </>
+                ) : (
+                  <>
+                    {' '}
+                    <h2
+                      className={classes.text}
+                      onClick={() => handleWorkSelected()}
+                      style={{ cursor: 'pointer' }}
+                    >
+                      {workSelected ? 'back' : 'work'}
+                    </h2>
+                  </>
+                )}
               </Grid>
               <Grid item xs={12} sm={6} className={classes.timerContainer}>
                 <p className={classes.text}>
