@@ -117,6 +117,7 @@ const HomePageComponent = () => {
         ref={videoRef}
         playsInline
         className={classes.video}
+        resizeMode='cover'
       >
         <source src={videoSrc} type='video/mp4' />
       </video>
