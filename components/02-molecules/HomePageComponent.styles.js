@@ -51,6 +51,7 @@ export const useStyles = makeStyles((theme) => ({
     color: theme.palette.primary.white,
     textTransform: 'uppercase',
     fontSize: '1.75rem',
+    textAlign: 'center',
   },
   topContainer: {
     display: 'flex',

@@ -106,7 +106,7 @@ const HomePageComponent = () => {
     setInfoSelected(false);
     setWorkSelected(false);
   };
-  const desktopView = useMediaQuery('(min-width:960px)');
+  const desktopView = useMediaQuery('(min-width:600px)');
   return (
     <Box className={classes.videoPlayerContainer}>
       <video
@@ -249,7 +249,7 @@ const HomePageComponent = () => {
           )}
 
           <div className={classes.bottomContainer}>
-            <Grid container>
+            <Grid container style={{ alignItems: 'center' }}>
               <Grid item xs={12} sm={6} className={classes.workContainer}>
                 {desktopView ? (
                   <>
