@@ -19,6 +19,7 @@ export const useStyles = makeStyles((theme) => ({
     backgroundColor: theme.palette.primary.white,
     width: '100vh',
     color: theme.palette.primary.white,
+    overflow: 'hidden',
   },
   overlay: {
     position: 'absolute',
@@ -50,6 +51,12 @@ export const useStyles = makeStyles((theme) => ({
     textTransform: 'uppercase',
     fontSize: '1.75rem',
     textAlign: 'center',
+    [theme.breakpoints.up('sm')]: {
+      '&:hover': {
+        color: theme.palette.primary.salmon,
+        opacity: '0.5',
+      },
+    },
   },
   topContainer: {
     display: 'flex',
@@ -86,13 +93,11 @@ export const useStyles = makeStyles((theme) => ({
   },
   workContainer: {
     order: 1,
-    // marginBottom: '5rem',
     '& h2': {
       fontSize: '1.5rem',
       textAlign: 'center',
     },
     [theme.breakpoints.up('sm')]: {
-      // marginBottom: '0rem',
       order: 2,
       '& h2': {
         textAlign: 'end !important',
@@ -113,20 +118,38 @@ export const useStyles = makeStyles((theme) => ({
   },
   neonGreen: {
     color: theme.palette.primary.neonGreen,
+    '&:hover': {
+      opacity: '0.5',
+    },
   },
   lightPurple: {
     color: theme.palette.primary.lightPurple,
+    '&:hover': {
+      opacity: '0.5',
+    },
   },
   orange: {
     color: theme.palette.primary.orange,
+    '&:hover': {
+      opacity: '0.5',
+    },
   },
   blue: {
     color: theme.palette.primary.blue,
+    '&:hover': {
+      opacity: '0.5',
+    },
   },
   yellowGreen: {
     color: theme.palette.primary.yellowGreen,
+    '&:hover': {
+      opacity: '0.5',
+    },
   },
   salmon: {
     color: theme.palette.primary.salmon,
+    '&:hover': {
+      opacity: '0.5',
+    },
   },
 }));
