@@ -78,7 +78,8 @@ export const useStyles = makeStyles((theme) => ({
   bottomContainer: {
     display: 'flex',
     position: 'relative',
-    minHeight: '18rem',
+    flexDirection: 'column',
+    minHeight: '13rem',
     [theme.breakpoints.up('sm')]: {
       minHeight: '0rem',
     },
