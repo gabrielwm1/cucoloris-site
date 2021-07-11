@@ -10,9 +10,10 @@ export const useStyles = makeStyles((theme) => ({
     left: '50%',
     transform: ' translate(-50%, -50%)',
     margin: '0 auto',
-    height: '100%',
+    height: '100vh',
     width: '100%',
     objectFit: 'cover',
+    resizeMode: 'cover',
   },
 
   videoPlayerContianer: {
