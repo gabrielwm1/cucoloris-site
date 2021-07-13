@@ -119,7 +119,9 @@ const HomePageComponent = () => {
         >
           <Box className={classes.topContainer}>
             <h1
-              className={classes.title}
+              className={
+                infoSelected || workSelected ? classes.title : classes.homeTitle
+              }
               style={{ cursor: 'pointer' }}
               onClick={() => handleHomeButton()}
             >
@@ -147,7 +149,7 @@ const HomePageComponent = () => {
                         justifyContent: 'center',
                       }}
                       onClick={() => handleInfoSelected()}
-                      className={classes.text}
+                      className={classes.title}
                     >
                       <p>Info</p>
                     </div>

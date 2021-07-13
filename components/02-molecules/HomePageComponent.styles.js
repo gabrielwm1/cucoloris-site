@@ -35,9 +35,9 @@ export const useStyles = makeStyles((theme) => ({
     textTransform: 'uppercase',
     fontSize: '1rem',
     [theme.breakpoints.up('sm')]: {
-      fontSize: '1.5rem',
+      fontSize: '1.75rem',
       '& p': {
-        fontSize: '1rem',
+        fontSize: '1.75rem',
       },
     },
     [theme.breakpoints.up('md')]: {
@@ -57,6 +57,13 @@ export const useStyles = makeStyles((theme) => ({
         opacity: '0.5',
       },
     },
+  },
+  homeTitle: {
+    fontFamily: theme.typography.bold,
+    color: theme.palette.primary.white,
+    textTransform: 'uppercase',
+    fontSize: '1.75rem',
+    textAlign: 'center',
   },
   topContainer: {
     display: 'flex',
@@ -155,6 +162,7 @@ export const useStyles = makeStyles((theme) => ({
   hoverInfoButton: {
     cursor: 'pointer',
     '&:hover': {
+      color: theme.palette.primary.salmon,
       opacity: '0.5',
     },
   },
