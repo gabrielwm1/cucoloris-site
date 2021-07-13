@@ -15,7 +15,9 @@ const HomePageComponent = () => {
   const classes = useStyles();
   const videoRef = useRef();
   const [workSelected, setWorkSelected] = useState(false);
-  const [videoSrc, setVideoSrc] = useState('assets/videos/carpe4diem.mp4');
+  const [videoSrc, setVideoSrc] = useState(
+    'https://firebasestorage.googleapis.com/v0/b/cucoloris.appspot.com/o/carpe4diem.mp4?alt=media&token=388d7db7-cd83-49e9-b723-1fd824bce1cd'
+  );
   const [infoSelected, setInfoSelected] = useState(false);
 
   const [days, setDays] = useState(0);
@@ -58,9 +60,13 @@ const HomePageComponent = () => {
   useEffect(() => {
     if (workSelected) {
       setInfoSelected(false);
-      setVideoSrc('/assets/videos/2019Reel.mp4');
+      setVideoSrc(
+        'https://firebasestorage.googleapis.com/v0/b/cucoloris.appspot.com/o/2019Reel.mp4?alt=media&token=d984c7fc-58af-4b9a-b3ce-55dc43d094fa'
+      );
     } else {
-      setVideoSrc('/assets/videos/carpe4diem.mp4');
+      setVideoSrc(
+        'https://firebasestorage.googleapis.com/v0/b/cucoloris.appspot.com/o/carpe4diem.mp4?alt=media&token=388d7db7-cd83-49e9-b723-1fd824bce1cd'
+      );
     }
     videoRef.current.load();
     videoRef.current.play();
@@ -89,8 +95,7 @@ const HomePageComponent = () => {
         muted
         ref={videoRef}
         playsInline
-        className={classes.video}
-      >
+        className={classes.video}>
         <source src={videoSrc} type='video/mp4' />
       </video>
 
@@ -102,14 +107,12 @@ const HomePageComponent = () => {
             display: 'flex',
             flexDirection: 'column',
             justifyContent: 'space-between',
-          }}
-        >
+          }}>
           <Box className={classes.topContainer}>
             <h1
               className={classes.title}
               style={{ cursor: 'pointer' }}
-              onClick={() => handleHomeButton()}
-            >
+              onClick={() => handleHomeButton()}>
               Cucoloris Pictures
             </h1>
 
@@ -119,8 +122,7 @@ const HomePageComponent = () => {
                   <h3
                     className={classes.title}
                     onClick={() => handleWorkSelected()}
-                    style={{ cursor: 'pointer' }}
-                  >
+                    style={{ cursor: 'pointer' }}>
                     {workSelected ? 'back' : 'work'}
                   </h3>
                 </>
@@ -134,8 +136,7 @@ const HomePageComponent = () => {
                         justifyContent: 'center',
                       }}
                       onClick={() => handleInfoSelected()}
-                      className={classes.text}
-                    >
+                      className={classes.text}>
                       <p>Info</p>
                     </div>
                   )}
@@ -152,8 +153,7 @@ const HomePageComponent = () => {
                     <a
                       href='https://theoschear.com/'
                       rel='noreferrer'
-                      target='_blank'
-                    >
+                      target='_blank'>
                       Theo Schear
                     </a>
                   </span>{' '}
@@ -162,8 +162,7 @@ const HomePageComponent = () => {
                     <a
                       href='https://sffilm.org/supported-projects/hard-to-swallow/'
                       rel='noreferrer'
-                      target='_blank'
-                    >
+                      target='_blank'>
                       2021 SFFILM FILMHOUSE RESIDENT
                     </a>
                   </span>{' '}
@@ -173,8 +172,7 @@ const HomePageComponent = () => {
                     <a
                       href='https://www.youtube.com/watch?v=NC2eq9SZatw'
                       rel='noreferrer'
-                      target='_blank'
-                    >
+                      target='_blank'>
                       EMPIRE RECORDS
                     </a>
                   </span>
@@ -184,8 +182,7 @@ const HomePageComponent = () => {
                     <a
                       href='https://www.creativewest.co/'
                       rel='noreferrer'
-                      target='_blank'
-                    >
+                      target='_blank'>
                       CREATIVE WEST
                     </a>
                   </span>{' '}
@@ -194,8 +191,7 @@ const HomePageComponent = () => {
                     <a
                       href='https://hueypnewtonfoundation.org/'
                       rel='noreferrer'
-                      target='_blank'
-                    >
+                      target='_blank'>
                       The Huey Newton Foundation
                     </a>
                   </span>
@@ -209,8 +205,7 @@ const HomePageComponent = () => {
                         <a
                           href='mailto:gabe.wilk@gmail.com'
                           rel='noreferrer'
-                          target='_blank'
-                        >
+                          target='_blank'>
                           Gabe Wilk
                         </a>
                       </span>{' '}
@@ -235,16 +230,14 @@ const HomePageComponent = () => {
                               style={{
                                 display: 'flex',
                                 justifyContent: 'flex-end',
-                              }}
-                            >
+                              }}>
                               <p>
                                 Website by{' '}
                                 <span className={classes.salmon}>
                                   <a
                                     href='mailto:gabe.wilk@gmail.com'
                                     rel='noreferrer'
-                                    target='_blank'
-                                  >
+                                    target='_blank'>
                                     Gabe Wilk
                                   </a>
                                 </span>
@@ -260,8 +253,7 @@ const HomePageComponent = () => {
                               justifyContent: 'flex-end',
                             }}
                             onClick={() => handleInfoSelected()}
-                            className={classes.text}
-                          >
+                            className={classes.text}>
                             <p className={classes.hoverInfoButton}>Info</p>
                           </div>
                         </>
@@ -273,8 +265,7 @@ const HomePageComponent = () => {
                     <h3
                       className={classes.title}
                       onClick={() => handleWorkSelected()}
-                      style={{ cursor: 'pointer' }}
-                    >
+                      style={{ cursor: 'pointer' }}>
                       {workSelected ? 'back' : 'work'}
                     </h3>
                   </>
