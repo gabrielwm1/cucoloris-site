@@ -18,8 +18,8 @@ const HomePageComponent = () => {
   const desktopView = useMediaQuery('(min-width:600px)');
   const [videoSrc, setVideoSrc] = useState(
     desktopView
-      ? 'https://firebasestorage.googleapis.com/v0/b/cucoloris.appspot.com/o/carpe4diem.mp4?alt=media&token=0f98fe1f-29d7-4868-ae03-f58f6e9bedc3'
-      : 'https://firebasestorage.googleapis.com/v0/b/cucoloris.appspot.com/o/Carpe4DiemMobile.mp4?alt=media&token=96d5b184-8868-4cd6-b663-1ec4255e1d52'
+      ? 'https://firebasestorage.googleapis.com/v0/b/cucoloris.appspot.com/o/CucolorisWebsite_ReworkedFix.mp4?alt=media&token=4b621991-0867-493e-b4a5-0abfbba9ab04'
+      : 'https://firebasestorage.googleapis.com/v0/b/cucoloris.appspot.com/o/CucolorisWebsite_ReworkedMobileFix.mp4?alt=media&token=f1604c1e-de62-4f63-b31d-06d8f75561db'
   );
   const [infoSelected, setInfoSelected] = useState(false);
 
@@ -71,8 +71,8 @@ const HomePageComponent = () => {
     } else {
       setVideoSrc(
         desktopView
-          ? 'https://firebasestorage.googleapis.com/v0/b/cucoloris.appspot.com/o/carpe4diem.mp4?alt=media&token=0f98fe1f-29d7-4868-ae03-f58f6e9bedc3'
-          : 'https://firebasestorage.googleapis.com/v0/b/cucoloris.appspot.com/o/Carpe4DiemMobile.mp4?alt=media&token=96d5b184-8868-4cd6-b663-1ec4255e1d52'
+          ? 'https://firebasestorage.googleapis.com/v0/b/cucoloris.appspot.com/o/CucolorisWebsite_ReworkedFix.mp4?alt=media&token=4b621991-0867-493e-b4a5-0abfbba9ab04'
+          : 'https://firebasestorage.googleapis.com/v0/b/cucoloris.appspot.com/o/CucolorisWebsite_ReworkedMobileFix.mp4?alt=media&token=f1604c1e-de62-4f63-b31d-06d8f75561db'
       );
     }
     videoRef.current.load();
@@ -102,7 +102,8 @@ const HomePageComponent = () => {
         muted
         ref={videoRef}
         playsInline
-        className={classes.video}>
+        className={classes.video}
+      >
         <source src={videoSrc} type='video/mp4' />
       </video>
 
@@ -114,14 +115,16 @@ const HomePageComponent = () => {
             display: 'flex',
             flexDirection: 'column',
             justifyContent: 'space-between',
-          }}>
+          }}
+        >
           <Box className={classes.topContainer}>
             <h1
               className={
                 infoSelected || workSelected ? classes.title : classes.homeTitle
               }
               style={{ cursor: 'pointer' }}
-              onClick={() => handleHomeButton()}>
+              onClick={() => handleHomeButton()}
+            >
               Cucoloris Pictures
             </h1>
 
@@ -131,7 +134,8 @@ const HomePageComponent = () => {
                   <h3
                     className={classes.title}
                     onClick={() => handleWorkSelected()}
-                    style={{ cursor: 'pointer' }}>
+                    style={{ cursor: 'pointer' }}
+                  >
                     {workSelected ? 'back' : 'work'}
                   </h3>
                 </>
@@ -145,7 +149,8 @@ const HomePageComponent = () => {
                         justifyContent: 'center',
                       }}
                       onClick={() => handleInfoSelected()}
-                      className={classes.title}>
+                      className={classes.title}
+                    >
                       <p>Info</p>
                     </div>
                   )}
@@ -162,7 +167,8 @@ const HomePageComponent = () => {
                     <a
                       href='https://theoschear.com/'
                       rel='noreferrer'
-                      target='_blank'>
+                      target='_blank'
+                    >
                       Theo Schear
                     </a>
                   </span>{' '}
@@ -171,7 +177,8 @@ const HomePageComponent = () => {
                     <a
                       href='https://sffilm.org/supported-projects/hard-to-swallow/'
                       rel='noreferrer'
-                      target='_blank'>
+                      target='_blank'
+                    >
                       2021 SFFILM FILMHOUSE RESIDENT
                     </a>
                   </span>{' '}
@@ -181,7 +188,8 @@ const HomePageComponent = () => {
                     <a
                       href='https://www.youtube.com/watch?v=NC2eq9SZatw'
                       rel='noreferrer'
-                      target='_blank'>
+                      target='_blank'
+                    >
                       EMPIRE RECORDS
                     </a>
                   </span>
@@ -191,7 +199,8 @@ const HomePageComponent = () => {
                     <a
                       href='https://www.creativewest.co/'
                       rel='noreferrer'
-                      target='_blank'>
+                      target='_blank'
+                    >
                       CREATIVE WEST
                     </a>
                   </span>{' '}
@@ -200,7 +209,8 @@ const HomePageComponent = () => {
                     <a
                       href='https://hueypnewtonfoundation.org/'
                       rel='noreferrer'
-                      target='_blank'>
+                      target='_blank'
+                    >
                       The Huey Newton Foundation
                     </a>
                   </span>
@@ -214,7 +224,8 @@ const HomePageComponent = () => {
                         <a
                           href='mailto:gabe.wilk@gmail.com'
                           rel='noreferrer'
-                          target='_blank'>
+                          target='_blank'
+                        >
                           Gabe Wilk
                         </a>
                       </span>{' '}
@@ -239,14 +250,16 @@ const HomePageComponent = () => {
                               style={{
                                 display: 'flex',
                                 justifyContent: 'flex-end',
-                              }}>
+                              }}
+                            >
                               <p>
                                 Website by{' '}
                                 <span className={classes.salmon}>
                                   <a
                                     href='mailto:gabe.wilk@gmail.com'
                                     rel='noreferrer'
-                                    target='_blank'>
+                                    target='_blank'
+                                  >
                                     Gabe Wilk
                                   </a>
                                 </span>
@@ -262,7 +275,8 @@ const HomePageComponent = () => {
                               justifyContent: 'flex-end',
                             }}
                             onClick={() => handleInfoSelected()}
-                            className={classes.text}>
+                            className={classes.text}
+                          >
                             <p className={classes.hoverInfoButton}>Info</p>
                           </div>
                         </>
@@ -274,7 +288,8 @@ const HomePageComponent = () => {
                     <h3
                       className={classes.title}
                       onClick={() => handleWorkSelected()}
-                      style={{ cursor: 'pointer' }}>
+                      style={{ cursor: 'pointer' }}
+                    >
                       {workSelected ? 'back' : 'work'}
                     </h3>
                   </>
